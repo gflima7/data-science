@@ -1,9 +1,13 @@
 # Copy here code of line function from previous exercise
 
-def box_of_hashes(height):
-    # You should call function line here with proper parameters
-    line(10, "#")
+def line(length, character):
+    if len(character) == 0:
+        character = "*"
+    else:
+        character = character[0]
+    print(character * length)
 
-# You can test your function by calling it within the following block
-if __name__ == "__main__":
-    box_of_hashes(5)
+def box_of_hashes(height):
+    for _ in range(height):
+        line(10, "#")
+
